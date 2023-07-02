@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITNESS CARTEL</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/stylea.css">
+    <link rel="stylesheet" href ="file:///E:/fontawesome/css/all.css">
+  <!-- Email service by emailjs -->
+  <script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+></script>
+<script type="text/javascript">
+  (function () {
+    // https://dashboard.emailjs.com/admin/account
+    emailjs.init("LhLJxevrmwEkzoG4z");
+  })();
+</script>
+<script type="text/javascript">
+  window.onload = function () {
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        
+        // these IDs from the previous steps
+        emailjs.sendForm("service_u53g22d", "contact_form", this).then(
+          function () {
+            console.log("SUCCESS!");
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
+
+        const userName = document.getElementsByName('user_name')
+        const userEmail = document.getElementsByName('user_email')
+        const message = document.getElementsByName('message')
+        const subject = document.getElementsByName('subject')
+
+
+        userName[0].value =""
+        userEmail[0].value =""
+        message[0].value =""
+        subject[0].value =""
+
+      });
+  };
+</script>
+</head>
+<body>
+    
+<!-- header section starts      -->
+
+<header class="header">
+    
+    
+          <img class="logoi"src="images/logo1.jpg">
+         
+
+
+    <a href="#" class="logo"> <span>FITNESS</span>CARTEL </a>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about us</a>
+        <a href="#Services">services</a>
+        <a href="#classes">classes</a>
+        <a href="#coaches">coaches</a>
+        <a href="#contact">contact us</a>
+    </nav>
+
+</header>
+
+<!-- header section ends     -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="swiper home-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide" style="background: url(images/bg-1.jpg) no-repeat;">
+                <div class="content">
+                    
+                    <h3>Welcome to FITNESS CARTEL</h3>
+                    <span>Build your body with us</span>
+                    <a href="form 1.html" class="btn">Join now</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide" style="background: url(images/bg-2.jpg) no-repeat;">
+                <div class="content">
+                    
+                    <h3>Welcome to FITNESS CARTEL</h3>
+                    <span>Build your body with us</span>
+                    <a href="form 1.html" class="btn">Join now</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide" style="background: url(images/bg-3.jpg) no-repeat;">
+                <div class="content">
+                    
+                    <h3>Welcome to FITNESS CARTEL</h3>
+                    <span>Build your body with us</span>
+                    <a href="form 1.html" class="btn">Join now</a>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+   
+                    
+    <div class="content">
+        <h1 class="heading"> <span>About us</span> </h1>
+        <h3 class="title">Every day is a chance to become better</h3>
+        <p align="justify"> The Fitness Center is a health, recreational, and social facility geared towards exercise, sports, and other physical activities. It may be a for-profit commercial facility or a community- or institutionally-supported center.
+            Large, clean, and spacious facility that has all the necessary equipment for their fitness routine. Knowledgeable and friendly staff of trainers. Best value for membership pricing. The membership pricing options are affordable and offer military, teacher, and healthcare employee discounts.</p>
+ 
+
+    
+
+<!-- gallery section starts -->
+
+<section class="gallery" id="gallery">
+
+    <h1 class="heading"> <span>Our Gallery</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="images/bodybuilding.jpg" alt="">
+            </div>
+            <div class="content">
+               
+                <h3>body building</h3>
+                <p>Bodybuilding is a form of strength training that involves progressively increasing resistance to build muscle mass and strength.</p>
+                
+            </div>
+        </div>
+
+        <div class="box second">
+            <div class="image">
+                <img src="images/men.jpg" alt="">
+            </div>
+            <div class="content">
+                
+                <h3>gym for men</h3>
+                <p>Our gym is the perfect destination for men who are serious about their fitness goals.</p>
+                
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/girl.jpg" alt="">
+            </div>
+            <div class="content">
+                
+                <h3>gym for women</h3>
+                <p>Our gym exclusively provide a comfortable and safe environment for women to workout and achieve their fitness goals.</p>
+                
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- gallery section ends -->
+    <br> <br>
+
+    <h1 class="heading"> <span>STAR REVIEW</span> </h1>
+    
+        <div class="container">
+          <div class="post">
+            <div class="text">Thanks for rating us!</div>
+            <div class="edit">EDIT</div>
+          </div>
+          <div class="star-widget">
+            <input type="radio" name="rate" id="rate-5">
+            <label for="rate-5" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-4">
+            <label for="rate-4" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-3">
+            <label for="rate-3" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-2">
+            <label for="rate-2" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-1">
+            <label for="rate-1" class="fas fa-star"></label>
+            <form action="#">
+              <header></header>
+              <div class="textarea">
+                <textarea cols="30" placeholder="Describe your experience.."></textarea>
+              </div>
+              <div class="btn2">
+                <button type="submit">Post</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <script>
+          const btn2 = document.querySelector("button");
+          const post = document.querySelector(".post");
+          const widget = document.querySelector(".star-widget");
+          const editBtn = document.querySelector(".edit");
+          btn2.onclick = ()=>{
+            widget.style.display = "none";
+            post.style.display = "block";
+            editBtn.onclick = ()=>{
+              widget.style.display = "block";
+              post.style.display = "none";
+            }
+            return false;
+          }
+        </script>
+    
+      
+</section>
+<!-- about section ends -->
+<!-- services section start -->
+<section class="Services" id="Services">
+    <h1 class="heading"> <span>Our Services</span> </h1>
+<div id="Services1">
+    <div class="title">
+        
+        <h2>Get your perfect body</h2>
+    </div>
+
+    <div class="boxa">
+        <div class="card">
+            <div class="image">
+            <img src="images/icon-2.png" alt="">
+        </div>
+            <h5>Make your body Harmonic</h5>
+            
+            <div class="pra">
+                <p>At Body Harmonics, we’re focused on the health and wellbeing of all humans. </p>
+
+                
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image">
+                <img src="images/icon-3.png" alt="">
+            </div>
+            <h5>Weight Loss Programs</h5>
+            <div class="pra">
+                <p>If you’re trying to lose weight but struggling to find a method that actually garners results
+
+                </p>
+
+                
+            </div>
+         
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="images/icon-2.png" alt="">
+            </div>
+         
+            <h5>Diet Selection</h5>
+            <div class="pra">
+                <p>Overall umbrella term referring to all phenomena related to food choice, eating behavior, and dietary intake/nutrition.
+                    </p>
+
+                
+            </div>
+         
+        </div>
+        <div class="boxa">
+            <div class="card">
+                <div class="image">
+                    <img src="images/icon-1.png" alt="">
+                </div>
+             
+                <h5>Individual Training Programs</h5>
+                <div class="pra">
+                    <p>These ITPs are specifically designed to help individuals bridge specific competency gaps or acquire new skills in short periods of time.</p>
+    
+                    
+                </div>
+            </div>
+
+    </div>
+</div>
+
+
+</section>
+<!-- services section end -->
+<!--classes section start-->
+
+<section class="classes" id="classes">
+    <h1 class="heading"> <span>classes</span> </h1>
+
+    <div class="class-container">
+
+        <div class="class-box">
+            <div class="class-image">
+                <img src="images/a2.jpg" alt="">
+                <h2>bodybuilding</h2>
+            </div> 
+            
+            <div class="class-image">
+                <img src="images/a3.jpg" alt="">
+                <h2>weight-lifting</h2>
+            </div> 
+
+            <div class="class-image">
+                <img src="images/a1.jpg" alt="">
+                <h2>cardio</h2>
+            </div> 
+        </div>
+    </div> 
+    <br><br><br>
+
+    <h1 class="heading"> <span>BMI Calculator</span> </h1>
+
+    <div class="bmi">
+        <background url="images/bmi.jpeg">
+        <h2>GET YOUR BODY MASS INDEX</h2>
+        <h1>WHAT IS YOUR BMI</h1>
+    </div>
+
+    <div class="forma">
+        <form class="bmifrm">
+
+            <label>Your Height</label> <br><br>
+            <input type="text" placeholder="Feet" id="hgt">
+            <input type="text" placeholder="Inches" id="hgt">
+            <br><br>
+        
+            <label>Your Weight</label> <br><br>
+            <input type="text" placeholder="kg" id="hgt">
+            <br><br><br><br>
+
+            <input type= "submit"  name="submit" value="Compute BMI" id="submit">
+            <br><br>
+
+            <input type="text" placeholder="Your BMI" id="submit">
+        </form>
+    </div>
+
+</section> 
+
+<!--classes section end-->
+
+<!-- coaches section start -->
+<section class="coaches" id="coaches">
+    <h1 class="heading"> <span>Coaches</span> </h1>
+<div id="coaches1">
+
+    <div class="title">
+        
+        <h1>Our Coaches</h1>
+    </div>
+
+
+    <div class="boxb">
+        <div class="carda">
+            <div class="image">
+                <img src="images/men.jpg" alt="" height="250px" width="210px">
+        </div>
+            <h5>Coach name</h5>
+            
+            <div class="pra">
+                <p>About coach description  </p>
+
+                
+            </div>
+        </div>
+    <div class="carda">
+        <div class="image">
+            <img src="images/a2.jpg" alt="" height="250px" width="210px">
+        </div>
+        <h5>Coach name</h5>
+        <div class="pra">
+            <p>About coach description </p>
+
+            
+        </div>
+     
+    </div>
+
+</div>
+
+
+</section>
+<!-- coaches section ends -->
+<!-- contact section start -->
+<section class="contact" id="contact">
+    <div class="bn">
+    <h1 class="heading"> <span>Contact Us</span> </h1>
+
+<div class="bn">
+    <div class="boxbb">
+        <div class="contactall">
+            <div class="image">
+                <img src="location.png">
+        </div>
+            <h1>Location</h1>
+            
+            <div class="prag">
+                <p> Fitness Cartel No.1049/A, A9 Road, Aluvihare, Matale. </p>
+
+                
+            </div>
+        </div>
+
+        <div class="contactall">
+            <div class="image">
+                <img src="email i.png" alt="">
+            </div>
+            <h1>E-mail Us</h1>
+            <div class="prag">
+                <p>Fitnesscartel@Gmail.Com
+                </p>
+
+                
+            </div>
+         
+        </div>
+        <div class="contactall">
+            <div class="image">
+                <img src="call i.png" alt="">
+            </div>
+         
+            <h1>Call Us</h1>
+            <div class="prag">
+                <p>+(94) 773456677
+                </p>
+            </div>
+         
+       
+
+        </div>
+</div>
+
+
+
+<div class="row justify-content-center">
+    <div class="col-lg-6">
+     
+        <form id="contact-form">
+            <div class="row g-3">
+                <div class="col-sm-6">
+                    <input type="text" name="user_name" class="form-control bg-light border-0 px-4"
+                        placeholder="Your Name" style="height: 55px;">
+                </div>
+                <div class="col">
+                    <input type="email" name="user_email" class="form-control bg-light border-0 px-4"
+                        placeholder="Email" style="height: 55px;">
+                </div>
+                <div class="col-sm-12">
+                    <input type="text" name="subject" class="form-control bg-light border-0 px-4"
+                        placeholder="Subject" style="height: 55px;">
+                </div>
+                <div class="col-sm-12">
+                    <textarea name="message" class="form-control bg-light border-0 px-4 py-3" rows="4"
+                        placeholder="Message"></textarea>
+                </div>
+                <div class="col-sm-12">
+                    <button name="save" value="Submit" class="btn btn-primary border-inner w-100 py-3"
+                        type="submit">Send Message</button></a>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+
+    </div>
+</div>
+<div>
+</section>
+<hr>
+<!-- contact section end -->
+<!-- footer section starts  -->
+
+<section class="footer">
+   
+    <div class="box-container">
+        <div class="box">
+          <img src="images/logo1.jpg">
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a class="links" href="#home">home</a>
+            <a class="links" href="#about">about us</a>
+            <a class="links" href="#Services">services</a>
+            <a class="links" href="#classes">classes</a>
+            <a class="links" href="#coaches">Coaches</a>
+            <a class="links" href="#contact">contact us</a>
+        </div>
+
+        <div class="box">
+            <h3>opening hours</h3>
+            <p> monday : <i> 7:00am - 10:30pm </i> </p>
+            <p> tuesday : <i> 7:00am - 10:30pm </i> </p>
+            <p> wednesday : <i> 7:00am - 10:30pm </i> </p>
+            <p> thursday : <i> 7:00am - 10:30pm </i> </p>
+            <p> friday : <i> 7:00am - 10:30pm </i> </p>
+            <p> saturday : <i> 7:00am - 10:30pm </i> </p>
+            <p> sunday : <i> closed </i> </p>
+        </div>
+
+        <div class="box">
+            <h3>Get in touch</h3>
+            <p> <i class="fas fa-phone"></i> +94773456677 </p>
+            <p> <i class="fas fa-envelope"></i> fitnesscartel@gmail.com </p>
+            <p> <i class="fas fa-map"></i> Fitness Cartel <br> No.1049/A, A9 Road, Aluvihare, <br> Matale.</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-whatsapp"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-twitter"></a>
+            </div>
+        </div>
+
+
+    </div>
+
+</section>
+
+<div class="credit"> created by <span>Fitness Cartel</span> | all rights reserved! </div>
+
+<!-- footer section ends -->
+
+
+
+
+
+    
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
